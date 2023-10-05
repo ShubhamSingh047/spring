@@ -1,0 +1,11 @@
+package com.shubham.shubhamDemo;
+
+public class LongTable implements Table {
+
+	@Override
+	public String showDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

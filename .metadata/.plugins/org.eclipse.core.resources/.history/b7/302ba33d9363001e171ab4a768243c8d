@@ -1,0 +1,23 @@
+package com.shubham.shubhamDemo;
+
+import java.util.Scanner;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ShubhamDemoApplication {
+
+	public static void main(String[] args) {
+//		SpringApplication.run(ShubhamDemoApplication.class, args);
+		System.out.print("Wlecome ! Please used size of table");
+		Scanner s=new Scanner(System.in);
+		String size=s.nextLine();
+		if(s.equals("long")) {
+			System.out.println("Long table");
+		}else {
+			System.out.println("short table");
+		}
+	}
+
+}
