@@ -2,6 +2,8 @@ package com.example.DI.dependncy_injection;
 
 import java.util.Scanner;
 
+import javax.xml.transform.Source;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -30,7 +32,23 @@ public class DependncyInjectionApplication {
 		
 		switch (type) {
 		case 1: {
-			car=(Car) context.getBean("familyCar");
+			System.out.println("");
+			
+			System.out.println("Please select from tyre option");
+			System.out.print("1)normal tyre \n 2)sports tyre");
+			int tyre=s.nextInt();
+			switch (tyre) {
+			case 1: {
+				car=(Car) context.getBean("familyCarNormalTyre");
+				break;
+			}
+			case 2:{
+				car=(Car) context.getBean("familyCarSportsTyre");
+				break;
+			}
+			default:
+				System.out.println("inavlid");
+			}
 			break;
 		}
 		case 2:{
@@ -46,7 +64,7 @@ public class DependncyInjectionApplication {
 		}
 		car.setOwnerName(name);
 		
-		System.out.println(car.getOwnerName()+" owns "+car.getInfo());
+		System.out.println(car.getOwnerName()+" owns a "+car.getInfo());
 		
 	}
 

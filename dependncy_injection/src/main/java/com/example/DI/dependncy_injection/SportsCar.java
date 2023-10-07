@@ -3,10 +3,16 @@ package com.example.DI.dependncy_injection;
 public class SportsCar implements Car {
 
 	String Owner;
+	Tyre tyre;
+	
+	public SportsCar(Tyre tyre) {
+		this.tyre=tyre;
+	}
+	
 	@Override
 	public String getInfo() {
 		// TODO Auto-generated method stub
-		return "Sports Car";
+		return "Sports Car "+tyre.getTyreInfo();
 	}
 
 	@Override

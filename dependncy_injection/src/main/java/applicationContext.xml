@@ -5,8 +5,19 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="familyCar" class="com.example.DI.dependncy_injection.FamilyCar"></bean>
-    <bean id="sportsCar" class="com.example.DI.dependncy_injection.SportsCar"></bean>
-    <bean id="truck" class="com.example.DI.dependncy_injection.Truck"></bean>
-
+    <bean id="normalTyre" class="com.example.DI.dependncy_injection.NormalTyre"></bean>
+    <bean id="sportsTyre" class="com.example.DI.dependncy_injection.SportsTyre"></bean>
+    <bean id="truckTyre" class="com.example.DI.dependncy_injection.TruckTyre"></bean>
+	<bean id="familyCarNormal" class="com.example.DI.dependncy_injection.FamilyCar">
+		<constructor-arg ref="normalTyre"></constructor-arg>
+	</bean>
+	<bean id="familyCarSports" class="com.example.DI.dependncy_injection.FamilyCar">
+		<constructor-arg ref="sportsTyre"></constructor-arg>
+	</bean>
+	<bean id="familyCarSportsTyre" class="com.example.DI.dependncy_injection.FamilyCar">
+		<constructor-arg ref="sportsTyre"></constructor-arg>
+	</bean>
+	<bean id="truck" class="com.example.DI.dependncy_injection.SportsCar">
+		<constructor-arg ref="truckTyre"></constructor-arg>
+	</bean>
 </beans>
