@@ -3,6 +3,7 @@ package com.example.DI.dependncy_injection;
 public class FamilyCar implements Car {
 	String Owner;
 	Tyre tyre;
+	
 	public FamilyCar(Tyre tyre) {
 		this.tyre=tyre;
 	}
