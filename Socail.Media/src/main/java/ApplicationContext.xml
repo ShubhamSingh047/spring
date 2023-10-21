@@ -6,5 +6,5 @@
 	<!-- bean definitions here -->
 	<bean id="simplePost" class="com.example.SocailMedia.Socail.Media.SimplePost" scope="prototype"></bean>
 	<bean id="simplePostList" class="com.example.SocailMedia.Socail.Media.SimplePostList" ></bean>
-	
+	<bean id="simplePostList2" class="com.example.SocailMedia.Socail.Media.SimplePostList" />
 </beans>

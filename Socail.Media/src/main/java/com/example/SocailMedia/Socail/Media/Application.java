@@ -17,7 +17,6 @@ public class Application {
 		while(true) {
 			
 			SimplePostList sp=(SimplePostList) context.getBean("simplePostList");
-			
 			System.out.println("What you want to do"
 					+ "\n1.make a post"
 					+ "\n2.Show All post"
@@ -35,7 +34,6 @@ public class Application {
 			}
 			case 2: {
 				int i=0;
-				System.out.println(sp.size());
 				while(i!=sp.size()) {
 					System.out.println(i+1+")"+sp.list.get(i).getMessage());
 					i++;
