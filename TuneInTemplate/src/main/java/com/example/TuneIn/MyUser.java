@@ -7,15 +7,5 @@ package com.example.TuneIn;
  */
 
 public class MyUser implements User {
-	Playlist playlist;
-	
-	@Override
-	public void setUserDetail(String name,Integer age) {
-		System.out.println(name+" "+age);
-	}
-	
-	@Override
-    public Playlist getPlaylist() {
-		return playlist;
-	}
+
 }

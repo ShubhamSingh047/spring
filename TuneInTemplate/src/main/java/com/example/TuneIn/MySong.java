@@ -7,14 +7,5 @@ package com.example.TuneIn;
  */
 
 public class MySong implements Song {
-	@Override
 
-    public String getSongName() {
-		return "Hello";
-	}
-
-	@Override
-    public void setName(String name) {
-		System.out.println(name);
-	}
 }

@@ -23,11 +23,12 @@ public class CustomerServicedemoApplication {
 		 *  
 		 */
 		ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("ApplicationContext.xml");
-		CustomerCare payment = (CustomerCare) context.getBean("Payments");
-		CustomerCare query = (CustomerCare) context.getBean("Query");
-		CustomerCare sales = (CustomerCare) context.getBean("Sales");
-		
+		CustomerCare payment = (CustomerCare) context.getBean("paymentsDepartment");
+		CustomerCare query = (CustomerCare) context.getBean("queryDepartment");
+		CustomerCare sales = (CustomerCare) context.getBean("salesDepartment");
+
 		Scanner scanner=new Scanner(System.in);
+
 		System.out.println("Welcome To our Customer Care Application");
 		System.out.print("Please enter your name: ");
 		String name=scanner.nextLine();
@@ -42,29 +43,36 @@ public class CustomerServicedemoApplication {
 		int num=scanner.nextInt();
 		if(num==1) {
 			payment.setCustomerName(name);
-			System.out.println("Welcome to payment department"+name);
+			System.out.println("Welcome to payment department "+name);
 			System.out.println("How may i assist you with your payment inquary");
 			System.out.println();
+			scanner.nextLine();
 			String issueString=scanner.nextLine();
+
 			payment.setProblem(issueString);
 			payment.getProblem();
+
 		}
 		else if(num==2) {
 			query.setCustomerName(name);
-			System.out.println("Welcome to Query department"+name);
+			System.out.println("Welcome to Query department "+name);
 			System.out.println("How may i assist you with your Query ");
+			scanner.nextLine();
 			String issueString=scanner.nextLine();
 			query.setProblem(issueString);
 			query.getProblem();
+
 		}
 		else if(num==3) {
 			sales.setCustomerName(name);
-			System.out.println("Welcome to Sales department"+name);
+			System.out.println("Welcome to Sales department "+name);
 			System.out.println("How may i assist you with your Sales");
 			System.out.println();
+			scanner.nextLine();
 			String issueString=scanner.nextLine();
 			sales.setProblem(issueString);
 			sales.getProblem();
+
 		}
 		else if(num==4) {
 			System.out.println("exit sucessfully !");
@@ -73,6 +81,6 @@ public class CustomerServicedemoApplication {
 		else {
 			System.out.println("Inavlid entry ! ");
 		}
-		
+		scanner.close();
 	}
 }
